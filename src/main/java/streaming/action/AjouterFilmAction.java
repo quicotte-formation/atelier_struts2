@@ -5,8 +5,11 @@
  */
 package streaming.action;
 
+import java.util.List;
 import streaming.entity.Film;
+import streaming.entity.Genre;
 import streaming.service.FilmService;
+import streaming.service.GenreService;
 
 /**
  *
@@ -16,6 +19,11 @@ public class AjouterFilmAction {
     
     private Film film;
 
+    public List<Genre> getGenres(){
+        
+        return new GenreService().lister();
+    }
+    
     public Film getFilm() {
         return film;
     }

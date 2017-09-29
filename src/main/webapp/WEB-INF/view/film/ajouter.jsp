@@ -18,6 +18,7 @@
             <s:textfield name="film.titre" label="Titre"/>
             <s:textarea cols="25" rows="10" name="film.synopsis" label="Synopsis"/>
             <s:textfield type="number" name="film.anneeprod" label="Année prod"/>
+            <s:select name="film.genre.id" list="genres" listKey="id" listValue="nom"/>
             <s:submit label="Enregistrer"/>
         </s:form>
     </body>

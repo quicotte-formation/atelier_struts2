@@ -6,4 +6,23 @@
     <constant name="struts.devMode" value="true" />
     <constant name="struts.convention.result.path" value="/WEB-INF/view/" />
     <constant name="struts.custom.i18n.resources" value="global" />
+    
+    <package name="film" namespace="/film" extends="struts-default">
+        <action name="ajouter_film" class="streaming.action.AjouterFilmAction">
+            <result name="show_form">/WEB-INF/view/film/ajouter.jsp</result>
+            <result name="success" type="redirect">
+                <param name="location">lister_films</param>
+            </result>
+        </action>
+        <action name="lister_films" class="streaming.action.ListerFilmsAction">
+            <result name="success">/WEB-INF/view/film/lister.jsp</result>
+        </action>
+    </package>
+    
+    <package name="login" namespace="/login" extends="struts-default">
+        <action name="login" class="streaming.action.LoginAction">
+            <result name="show_form">/WEB-INF/view/login/login.jsp</result>
+            <result name="success">/WEB-INF/view/login/logged.jsp</result>
+        </action>
+    </package>
 </struts> 
